@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import java.util.Timer; 
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -43,11 +44,25 @@ public void setLowPower(/*No parameter*/){
 
 }
 
+public void setMedPower(/*No parameter*/){
+  //command used to set motor to 50% or .5 power
+      setPower(.5);
+  
+  }
+
 public void stopPower(){
 //safety measure to stop power
 setPower(0);
 
 }
+
+public void setLowPowerAuto5(/*No parameter*/){
+  //command used to set motor to 10% or .1 power
+    Timer timer = new Timer();
+    timer.schedule(newTimerTask() {@overide public void run(){/* my database code here */}}, );
+      setPower(.1);
+  
+  }
 
   @Override
   public void initDefaultCommand() {
