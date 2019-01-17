@@ -7,15 +7,13 @@
 
 package frc.robot.subsystems;
 
-import java.util.Timer;
-
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * Add your docs here.
- */ // public void  
+ */ // public void
 public class FlyWheel extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
@@ -31,10 +29,10 @@ raven = new TalonSRX(0);
 
 
 
-public void setPower(/*parameter called power*/double power) {
+//public void setPower(/*parameter called power*/double power) {
     /* setPower is a method */
-    raven.set(speed);
-    raven.set(power);
+   /* raven.set(speed);
+    raven.set(power);*/
     // needs controlMode.percentOutput or TalonSRX, sets % of maximum voltage to
     // motor
 

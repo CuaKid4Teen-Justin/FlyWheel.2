@@ -16,6 +16,18 @@ import frc.robot.Robot;
 public class SetMedPower extends Command {
   public SetMedPower() {
     // Use requires() here to declare subsystem dependencies
+    
+    public class SetPower extends Command{
+
+      private double m_power;
+      public SetPower(double power) {
+          m_power = power;
+          requires(Robot.flyWheel);
+          // Aaron deleted SetMed, Low, and SwtPower since he added them somewhere else
+      }
+
+    }
+    
     requires(Robot.flyWheel);
   }
 
@@ -27,6 +39,7 @@ public class SetMedPower extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    Robot.flyWheel.setPower(m_power);
   }
 
   // Make this return true when this Command no longer needs to run execute()
