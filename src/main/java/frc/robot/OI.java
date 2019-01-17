@@ -39,4 +39,13 @@ public class OI {
   // Start the command when the button is released and let it run the command
   // until it is finished as determined by it's isFinished method.
   // button.whenReleased(new ExampleCommand());
+
+public OI(){
+
+  smartDashboard.putData("10%", new setPower(10));
+  // smartDashboard.putData("10% for 5 seconds", new setLowPowerAuto5())
+  smartDashboard.putData("50%",(50));
+  smartDashboard.putData("STOP", new setPower(0));
+}
+
 }
